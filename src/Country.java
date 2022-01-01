@@ -19,10 +19,15 @@ public class Country {
 //		System.out.println(n.population);
 		
 		
-		Singapore s = new Singapore();
-		s.identifyRace("Chinese");
-		Taiwan t = new Taiwan();
-		t.whereLiveIn(1);
+		Singapore singapore = new Singapore();
+		singapore.identifyRace("Chinese");
+		
+		Taiwan taiwan = new Taiwan();
+		taiwan.whereLiveIn(1);
+		
+		Australia australia = new Australia();
+		australia.addamountOfSheep(1000);
+		System.out.println(australia.amountOfSheep);
 
 	}
 	
@@ -96,6 +101,11 @@ class Taiwan extends Nation {  // Nation 부모 클래스의 Taiwan 자식 클래스
 
 class Australia extends Nation {
 	// 멤버변수 하나, 메서드 하나
-	int sheep;
+	int amountOfSheep = 0;
+	
+	int addamountOfSheep(int a) {
+		this.amountOfSheep = a;
+		return ++a; 
+	}
 }
 
