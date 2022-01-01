@@ -7,6 +7,7 @@ public class Country {
 		하나와 메서드 하나를 생성하시오. */
 		
 		Nation n = new Nation("Seoul",510_000_000,100000);
+		System.out.println(n.countryName);
 		System.out.println(n.area);
 		System.out.println(n.population);
 		
